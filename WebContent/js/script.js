@@ -4,8 +4,8 @@ function validation() {
 		alert("Title is Required");
 		return false;
 	}
-	if ((a.length < 2) || (a.length > 30)) {
-        alert("Title should have 2 to 30 characters.");
+	if ((a.length < 2) || (a.length > 65)) {
+        alert("Title should have 2 to 65 characters.");
         return false;
     }
 	var b = document.forms["form"]["txtPrice"].value;
