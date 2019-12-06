@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Menu Item </title>
+           <link rel="stylesheet" type"text/css" href="./style/style.css"/>
+		   <script src="./js/script.js" type="text/javascript"></script>
+    </head>
+	<body>
+		<header><span id="head">truYum</span>
+			<img class="img" src="./images/truyum-logo-light.png"/> 
+			<a id="menu" href="./menu-item-list-admin.html"/>Menu</a>
+		</header>
+	<div>
+		<h2>Edit Menu Item</h2>
+			<form class="cont" name="form" onSubmit="return validation()" method="post" action="edit-menu-item-status.html">
+				<table>
+					<tr>
+						<td colspan="4"><label for="txtName"> Name</label></td>
+					</tr>
+					<tr>
+						<td colspan="4"><input type="text" id="txtName" name="txtName" size="80" value="Sandwich"></td>
+					</tr>
+					<tr>
+						<td><label for="txtPrice">Price(Rs.)</label></td>
+						<td>Active</td>
+						<td><label for="txtDoB">Date of Launch</label></td>
+						<td><label for="Category">Category</label></td>
+					</tr>
+					<tr>
+						<td><input type="textbox" class="title-price" id="txtPrice" name="txtPrice" value="97"></td>
+						<td><label for="rdYes"><input type="radio" id ="rdYes" name="rdYes" checked>Yes</label>
+						<label for="rdNo"><input type="radio" id="rdNo" name="rdYes" >No</label></td>
+						<td><input type="text" id="txtDoB" name="txtDoB" value="27/04/2022"></td>
+						<td><select name="Category" id="Category">
+							<option>Starters</option>
+							<option>Main Course</option>
+							<option>Dessert</option>
+							<option>Drinks</option>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="checkbox" id="cbDelivery" name="cbDelivery" checked>Free Delivery</td>
+					</tr>
+					<tr>
+						<td  colspan="2"><input class="color" type="submit" value="Save"></td>
+					</tr>
+				</table>
+			</form>
+	</div>	
+<footer>
+	<span>Copyright@2019<span>
+</footer>
+	</body>
+</html>
+
+
