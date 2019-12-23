@@ -43,7 +43,7 @@ public class CartDaoCollectionImpl implements CartDao {
 		Cart cart = userCarts.get(userId);
 
 		double total = 0.0d;
-		if (cart == null || menuItemList.isEmpty()) {
+		if (cart == null ||cart.getMenuItemList()==null || menuItemList.isEmpty()) {
 			throw new CartEmptyException();
 		}
 		else {
