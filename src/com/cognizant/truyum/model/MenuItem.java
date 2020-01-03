@@ -9,7 +9,7 @@ public class MenuItem {
 	private float price;
 	private boolean active;
 	private Date dateOfLaunch;
-	private String Category;
+	private String category;
 	private boolean freeDelivery;
 
 	public MenuItem(long id, String name, float price, boolean active, Date dateOfLaunch, String category,
@@ -20,7 +20,7 @@ public class MenuItem {
 		this.price = price;
 		this.active = active;
 		this.dateOfLaunch = dateOfLaunch;
-		Category = category;
+		this.category = category;
 		this.freeDelivery = freeDelivery;
 	}
 
@@ -69,11 +69,11 @@ public class MenuItem {
 	}
 
 	public String getCategory() {
-		return Category;
+		return category;
 	}
 
 	public void setCategory(String category) {
-		Category = category;
+		this.category = category;
 	}
 
 	public boolean isFreeDelivery() {
@@ -110,7 +110,7 @@ public class MenuItem {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
 		return String.format("%-20s  Rs.%7.2f  %-5s %-10s  %-15s %-5s Edit", name, price, active ? "Yes" : "No",
-				sdf.format(dateOfLaunch), Category, freeDelivery ? "Yes" : "No");
+				sdf.format(dateOfLaunch), category, freeDelivery ? "Yes" : "No");
 
 	}
 }
