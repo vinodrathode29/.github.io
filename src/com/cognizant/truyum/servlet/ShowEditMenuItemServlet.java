@@ -1,4 +1,4 @@
-package com.cogniant.truyum.model;
+package com.cognizant.truyum.servlet;
 
 import java.io.IOException;
 
