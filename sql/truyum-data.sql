@@ -24,7 +24,9 @@ select *from menu_item;
 -- Update MenuItem
 -- --------------------------------------------------------------------------------------
 
-update menu_item set me_name ='Biryani' where me_id= 1;
+update menu_item
+set me_name ='Biryani'
+where me_id= 1;
 
 -- Display Admin List
 
@@ -34,7 +36,10 @@ select *from menu_item;
 -- Creating Users
 -- --------------------------------------------------------------------------------------
 
-insert into user(us_name) values('Yigrette'),('Jon Snow');
+insert into user(us_id,us_name)
+values
+(1,'Yigrette'),
+(2,'Jon Snow');
 
 -- Display User List
 
@@ -49,11 +54,13 @@ select *from user;
  where me_active='Yes' and me_date_of_launch  <= (select(curdate())); 
 
 -- --------------------------------------------------------------------------------------
--- Inserting values in Cart
+-- Inserting Items in Cart
 -- --------------------------------------------------------------------------------------
 
-insert into cart(ct_us_id,ct_pr_id) values (1,3);
-insert into cart(ct_us_id,ct_pr_id) values (1,4);
+insert into cart(ct_us_id,ct_pr_id)
+values (1,3);
+insert into cart(ct_us_id,ct_pr_id)
+values (1,4);
 
 -- insert into cart(ct_us_id,ct_pr_id) values (1,3);
 
@@ -68,7 +75,7 @@ select *from cart;
 -- --------------------------------------------------------------------------------------
 
 select me_name,me_free_delivery, me_price 
- from menu_item
+from menu_item
 inner join cart on ct_pr_id=me_id
 where ct_us_id=1;
 
@@ -84,7 +91,10 @@ where ct_us_id=1;
 -- To Delete an Item From Cart
 -- --------------------------------------------------------------------------------------
 
-delete from cart where ct_us_id=1 and ct_pr_id=3 limit 1;
+delete from cart
+where ct_us_id=1
+and ct_pr_id=3
+limit 1;
 
 -- --------------------------------------------------------------------------------------
 --  To View Cart after Deleting
