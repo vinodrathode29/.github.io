@@ -38,7 +38,7 @@
 					
 						<label for="rdNo"><input type="radio" id="rdNo" name="rdYes" value="No"<c:if test="${ menuItem.active eq 'false'}"> checked="checked"</c:if>>No</label></td>
 						
-						<td><fmt:formatDate type="date" pattern = "dd/MM/yyyy" value= "${menuItem.dateOfLaunch}" var="format" /><input type="text" id="txtDoB" name="txtDoB"  value="${format }"></td>
+						<td><fmt:formatDate type="date" pattern = "dd/MM/yyyy" value= "${movie.dateOfLaunch}" var="format" /><input type="text" id="txtDoB" name="txtDoB"  value="${format }"></td>
 						
 						<td><select name="category" id="category">
 							<option value="${menuItem.category}">${menuItem.category}</option>
