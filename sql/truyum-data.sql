@@ -25,7 +25,7 @@ select *from menu_item;
 -- --------------------------------------------------------------------------------------
 
 update menu_item
-set me_name ='Biryani'
+set me_name ='Biryani Rice',me_price= '155',me_active='Yes',me_date_of_launch='2015-02-02',me_category= 'Main Course',me_free_delivery='Yes'
 where me_id= 1;
 
 -- Display Admin List
